@@ -1,6 +1,9 @@
 #!/bin/bash
 
-while true
-do
-    python main.py
-done
+ENTRYPOINT="main.py"
+
+watchmedo shell-command \
+auto-restart \
+--patterns="*.py" \
+--command='python "$ENTRYPOINT"' \
+.
