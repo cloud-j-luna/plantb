@@ -2,11 +2,12 @@ setup:
 	chmod u+x boot.sh
 	chmod u+x auto-update.sh
 	/bin/bash auto-update.sh &
-	cp boot.sh ~
-	/bin/bash ~/boot.sh
+	cp boot.sh /etc/init.d/
+	update-rc.d boot.sh
+	/bin/bash /etc/init.d/boot.sh
 
 dependencies:
 	pip install watchdog
 
 clean:
-	rm ~/boot.sh
+	rm /etc/init.d/boot.sh
