@@ -1,13 +1,17 @@
-from modules.moisture.controller import MoistureController
-from modules.moisture.sensor import MoistureSensor
+from time import sleep
+
+from modules.mock.controller import MockController
+from modules.mock.sensor import MockSensor
 
 controllers = []
+
 
 def main():
     print("Loading PlantB modules...")
     
-    controllers.append(MoistureController(MoistureSensor(1,2,3)))
+    controllers.append(MockController(MockSensor(1,2,3)))
     start()
+
 
 def start():
     print("Starting controllers...")
@@ -16,7 +20,6 @@ def start():
         controller.setup()
 
     while True:
-        print("hello")
         sleep(3)
 
 

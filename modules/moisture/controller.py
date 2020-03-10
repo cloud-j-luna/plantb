@@ -2,5 +2,11 @@ class MoistureController:
     def __init__(self, sensor):
         self.sensor = sensor
 
+    def onHigh(self, value):
+        print(value)
+
+    def onLow(self, value):
+        print(value)
+
     def setup(self):
-        self.sensor.setup(lambda h: print(h), lambda l: print(l))
+        self.sensor.setup(lambda h: self.onHigh(h), lambda l: self.onLow(l))
