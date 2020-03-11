@@ -12,10 +12,11 @@ class MockController:
 
         response = client.chat_postMessage(
             channel="plantb",
-            text="Help water please"
+
+            text="Test"
         )
 
         print(response)
 
     def setup(self):
-        self.sensor.setup(lambda: self.x(), lambda: print("0"))
+        self.sensor.setup(self.x, lambda: print("0"))

@@ -20,7 +20,7 @@ def start():
         controller.setup()
 
     while True:
-        sleep(3)
+        sleep(30)
 
 
 if __name__ == '__main__':
