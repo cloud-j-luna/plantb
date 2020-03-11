@@ -5,5 +5,5 @@ ENTRYPOINT="main.py"
 watchmedo shell-command \
 auto-restart \
 --patterns="*.py" \
---command='python "$ENTRYPOINT"' \
+--command='python3 "$ENTRYPOINT"' \
 .

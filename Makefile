@@ -7,7 +7,9 @@ setup:
 	/bin/bash /etc/init.d/boot.sh
 
 dependencies:
-	pip install watchdog
+	pip3 install watchdog
+	pip3 install pyyaml
+	pip3 install slackclient
 
 clean:
 	rm /etc/init.d/boot.sh
