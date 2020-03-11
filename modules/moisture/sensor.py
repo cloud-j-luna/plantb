@@ -22,3 +22,6 @@ class MoistureSensor(DigitalSensor):
 
         GPIO.add_event_detect(channel, GPIO.BOTH, bouncetime=300)
         GPIO.add_event_callback(channel, callback)
+
+    def probe(self):
+        return GPIO.input(self.gpio)

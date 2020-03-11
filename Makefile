@@ -10,6 +10,7 @@ dependencies:
 	pip3 install watchdog
 	pip3 install pyyaml
 	pip3 install slackclient
+	pip3 install RPi.GPIO
 
 clean:
 	rm /etc/init.d/boot.sh
