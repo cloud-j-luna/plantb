@@ -25,7 +25,7 @@ def start():
     publishers = [SlackPublisher()]
 
     while True:
-        result = "Moisture: " + controller[0].probe()
+        result = "Moisture: " + controllers[0].probe()
 
         for publisher in publishers:
             publisher.publish(result)

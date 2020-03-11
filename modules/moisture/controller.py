@@ -10,3 +10,6 @@ class MoistureController:
 
     def setup(self):
         self.sensor.setup(lambda h: self.onHigh(h), lambda l: self.onLow(l))
+
+    def ask_probe(self):
+        return self.sensor.probe()

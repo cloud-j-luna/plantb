@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 from modules.abstract.sensor import DigitalSensor
 
+
 class MoistureSensor(DigitalSensor):
 
     def __init__(self, ground, vcc, gpio):
@@ -23,5 +24,5 @@ class MoistureSensor(DigitalSensor):
         GPIO.add_event_detect(channel, GPIO.BOTH, bouncetime=300)
         GPIO.add_event_callback(channel, callback)
 
-    def probe(self):
-        return GPIO.input(self.gpio)
+    def ask_probe(self):
+        return str(GPIO.input(self.gpio))
