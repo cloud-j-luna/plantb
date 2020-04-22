@@ -7,10 +7,10 @@ setup:
 	/bin/bash /etc/init.d/boot.sh
 
 dependencies:
-	pip3 install watchdog
-	pip3 install pyyaml
-	pip3 install slackclient
-	pip3 install RPi.GPIO
+	pip install watchdog
+	pip install pyyaml
+	pip install slackclient
+	pip install RPi.GPIO
 
 clean:
 	rm /etc/init.d/boot.sh
